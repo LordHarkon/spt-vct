@@ -1,16 +1,7 @@
-# SPT-SpeedLoad
+# SPT-VCT (Variable Construction Time)
 
-This mod allows magazines to be loaded and unloaded with ammo much faster than before.
+This mod allows you to adjust the construction speed of your hideout buildings.
 
-Vanilla Speed:
+By default, the mod reduces construction time to 10% of the normal duration. You can customize this setting in the config.js file.
 
--   Loading: 0.85
--   Unloading: 0.3
-
-SPT-SpeedLoad Speed:
-
--   Loading: 0.3
--   Unloading: 0.05
-
-The speeds offered by the mod can be changed in the config.json file inside the mod folder.
-I have no idea what happens if you set the values too low or too high, so modify them at your own risk.
+Please ensure the multiplier is set to a positive value. Setting it too high may cause unintended issues in the game. Use at your own risk.
