@@ -40,16 +40,16 @@ class Mod implements IPostDBLoadMod
                     // Check if the area has a multiplier
                     const configArea = configuration.buildings.find((configArea) => configArea.id === area._id);
 
-                    if (configArea && configArea.multiplier !== 1)
+                    if (configArea && configArea.multiplier !== 100)
                     {
                         // Calculate the new construction time
-                        constructionTime = Math.round(stage.constructionTime * configArea.multiplier / 100);
+                        constructionTime = Math.round(stage.constructionTime * (configArea.multiplier / 100));
                         changes.push(`Changed the construction time of the ${configArea.name} ${parseInt(stageKey) + 1} to: ${configArea.multiplier}% of the original time.`);
                     }
                     else
                     {
                         // Calculate the new construction time
-                        constructionTime = Math.round(stage.constructionTime * configuration.globalHideoutConstructionMultiplier / 100);
+                        constructionTime = Math.round(stage.constructionTime * (configuration.globalHideoutConstructionMultiplier / 100));
                     }
 
                     stage.constructionTime = constructionTime;
